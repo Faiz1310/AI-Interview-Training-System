@@ -1,0 +1,82 @@
+[
+  {
+    "test": 1,
+    "name": "Auth System",
+    "passed": true,
+    "status": "Register->Login->Token verified",
+    "response_sample": "User ID: None, Email: viva_user_1776188470@test.com",
+    "timestamp": "2026-04-14T23:11:10.918717"
+  },
+  {
+    "test": 2,
+    "name": "Resume Pipeline",
+    "passed": true,
+    "status": "Resume uploaded and stored",
+    "response_sample": "Resume ID: 13",
+    "timestamp": "2026-04-14T23:11:10.939433"
+  },
+  {
+    "test": 3,
+    "name": "Interview Start",
+    "passed": true,
+    "status": "Session created successfully",
+    "response_sample": "Session ID: 9",
+    "timestamp": "2026-04-14T23:11:11.797791"
+  },
+  {
+    "test": 4,
+    "name": "Question Flow",
+    "passed": false,
+    "status": "Submit answer failed: 422",
+    "response_sample": "{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"body\"],\"msg\":\"Field required\",\"input\":null}]}",
+    "timestamp": "2026-04-14T23:11:11.827808"
+  },
+  {
+    "test": 5,
+    "name": "Session Completion",
+    "passed": true,
+    "status": "Session marked as completed",
+    "response_sample": "{'session_id': 9, 'status': 'completed', 'overall_score': 0.0, 'correctness_score': 0.0, 'clarity_score': 0.0, 'confidence_score': 0.0, 'performance_label': 'Critical Improvement Needed', 'coach_message': 'Significant improvement needed across all areas. Start by reviewing fundamentals and practice daily mock interviews.', 'strongest_area': 'Correctness', 'weakest_area': 'Correctness', 'recommendations': [{'area': 'Knowledge', 'priority': 'high', 'suggestion': 'Review core technical concepts. Create flashcards for key topics and practice explaining them aloud.'}, {'area': 'Communication', 'priority': 'high', 'suggestion': 'Practice structured responses using STAR method. Record yourself and listen back for filler words.'}, {'area': 'Confidence', 'priority': 'high', 'suggestion': 'Practice with a friend or record yourself. Focus on maintaining eye contact and speaking steadily.'}], 'trend_insight': '', 'ended_at': '2026-04-14T17:41:11.833618'}",
+    "timestamp": "2026-04-14T23:11:11.844695"
+  },
+  {
+    "test": 6,
+    "name": "Feedback System",
+    "passed": true,
+    "status": "Feedback complete with all metrics",
+    "response_sample": "Score: 0.0, Breakdown: {'correctness': {'score': 0, 'weight': '50%', 'contribution': 0.0, 'rationale': 'Technical knowledge is the primary indicator'}, 'clarity': {'score': 0, 'weight': '30%', 'contribution': 0.0, 'rationale': 'Communication quality affects workplace effectiveness'}, 'confidence': {'score': 0, 'weight': '20%', 'contribution': 0.0, 'rationale': 'Delivery presence supports effective communication'}, 'behavior': {'issues_detected': 0, 'assessment': 'good', 'note': 'Behavioral factors do not reduce correctness scores - they provide context'}}",
+    "timestamp": "2026-04-14T23:11:11.872226"
+  },
+  {
+    "test": 7,
+    "name": "Dashboard & Soft Delete",
+    "passed": true,
+    "status": "Soft delete works (session hidden)",
+    "response_sample": "Sessions: 1 -> 0",
+    "timestamp": "2026-04-14T23:11:12.403379"
+  },
+  {
+    "test": 8,
+    "name": "Behavior Metrics",
+    "passed": false,
+    "status": "Exception: When initializing mapper Mapper[InterviewBehaviorMetric(interview_behavior_metrics)], expression 'InterviewSession' failed to locate a name ('InterviewSession'). If this is a class name, consider adding this relationship() to the <class 'models.behavior_metric.InterviewBehaviorMetric'> class after both dependent classes have been defined.",
+    "response_sample": null,
+    "timestamp": "2026-04-14T23:11:13.129264"
+  },
+  {
+    "test": 9,
+    "name": "Audio Transcription",
+    "passed": false,
+    "status": "Exception: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[InterviewBehaviorMetric(interview_behavior_metrics)]'. Original exception was: When initializing mapper Mapper[InterviewBehaviorMetric(interview_behavior_metrics)], expression 'InterviewSession' failed to locate a name ('InterviewSession'). If this is a class name, consider adding this relationship() to the <class 'models.behavior_metric.InterviewBehaviorMetric'> class after both dependent classes have been defined.",
+    "response_sample": null,
+    "timestamp": "2026-04-14T23:11:13.133385"
+  },
+  {
+    "test": 10,
+    "name": "Forgot Password",
+    "passed": false,
+    "status": "No reset token returned",
+    "response_sample": "{'message': 'If an account exists with this email, a password reset link has been sent. Check your email.', 'demo_token': 'NGWYQO_nV0XC0v33AmgBK9BqAhkTbc3zcy6ZQXgwPaQ', 'demo_note': 'In production, this token would be sent via email instead'}",
+    "timestamp": "2026-04-14T23:11:13.437400"
+  }
+]
